@@ -7,9 +7,13 @@ const PORT = process.env.PORT || 3000;
 
 app.use(function (req, res, next) {
     if (req.header['x-forward-proto'] === 'http') {
+        // console.log(req);
+        // console.log(res);
         next();
     } else {
-       // res.redirect('http://' + req.hostname + req.url);
+        // console.log(req);
+        // console.log(res);
+        // res.redirect('http://' + req.hostname + req.url);
         next();
     }
 });
