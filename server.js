@@ -6,14 +6,15 @@ const PORT = process.env.PORT || 3000;
 
 
 app.use(function (req, res, next) {
-    if (req.header['x-forward-proto'] === 'http') {
+    if (req.header['x-forward-proto'] === 'https') {
         // console.log(req);
         // console.log(res);
-        next();
+        res.redirect('http://' + req.hostname + req.url);
+        // next();
     } else {
         // console.log(req);
         // console.log(res);
-        // res.redirect('http://' + req.hostname + req.url);
+        //
         next();
     }
 });
