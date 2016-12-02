@@ -9,7 +9,8 @@ app.use(function (req, res, next) {
     if (req.header['x-forward-proto'] === 'http') {
         next();
     } else {
-        res.redirect('http://' + req.hostname + req.url);
+       // res.redirect('http://' + req.hostname + req.url);
+        next();
     }
 });
 app.use(express.static('public'));
