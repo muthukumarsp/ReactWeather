@@ -13,8 +13,8 @@ app.use(function (req, res, next) {
     } else {
         // console.log(req);
         // console.log(res);
-        res.redirect('http://' + req.hostname + req.url);
-        // next();
+        // res.redirect('http://' + req.hostname + req.url);
+        next();
     }
 });
 app.use(express.static('public'));
