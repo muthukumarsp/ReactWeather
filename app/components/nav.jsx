@@ -5,7 +5,13 @@ var {IndexLink} = require('react-router');
 var Nav = React.createClass({
     onSearch: function (e) {
         e.preventDefault();
-        alert('not done');
+        // alert( this.refs.location.value);
+        let location = this.refs.location.value;
+        var encodedLocation = encodeURIComponent(location);
+        if (location.length > 0) {
+            this.refs.location.value = '';
+            window.location.hash = '#/?location=' + encodedLocation;
+        }
     },
     render: function () {
         return (
