@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?appid=d24faea7fe2a3a493233ed7d2a2c3e65&units=imperial';
+const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?appid=d24faea7fe2a3a493233ed7d2a2c3e65&units=metric';
 //key d24faea7fe2a3a493233ed7d2a2c3e65
 // q=Sydney&
 
